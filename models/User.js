@@ -33,7 +33,10 @@ let userSchema = mongoose.Schema({
         type: Date,
         default: () => Date.now()
     },
-	Verified: Boolean,
+	Verified: {
+        Type: Boolean,
+        default: false
+    },
 	ProfilePicture: {
         type: String,
         default: "profile.svg"
