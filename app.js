@@ -6,6 +6,9 @@ const app = express();
 
 mongoose.connect("mongodb://localhost:27017/OldMates");
 
+app.set('view engine', 'ejs');
+
+app.use('/', require('./routes/index'));
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000!");
