@@ -21,7 +21,7 @@ let userSchema = mongoose.Schema({
     },
 	Birthday: {
         Day: Number,
-        Month: String,
+        Month: Number,
         Year: Number
     },
 	CreatedOn: {
