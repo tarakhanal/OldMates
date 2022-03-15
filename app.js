@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.use('/', require('./routes/index'));
+app.use('/register', require('./routes/register'));
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000!");
