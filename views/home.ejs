@@ -29,11 +29,36 @@
                 </div>
             <form action="http://localhost:3000/login" method="post">
                 <div class="modal-body">
-                    <input type="text" name="username" id="password" required placeholder="Username"><br>
-                    <input type="password" name="password" id="password" required placeholder="Password">
+                    <input type="text" name="username" id="username" class="form-control" required placeholder="Username"><br>
+                    <input type="password" name="password" id="password" class="form-control" required placeholder="Password">
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                
+            </form>
+            </div>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title" id="loginTitle">Register</h4>
+                </div>
+            <form action="http://localhost:3000/register" method="post">
+                <div class="modal-body">
+                    <input type="text" name="firstName" id="firstName" class="form-control" required placeholder="First Name"><br>
+                    <input type="text" name="lastName" id="lastName" class="form-control" required placeholder="Last Name"><br>
+                    <input type="email" name="email" id="email" class="form-control" required placeholder="jon@doe.com"><br>
+                    <input type="password" name="password" id="password" class="form-control" required placeholder="Password"><br>
+                    <input type="password" name="confirm" id="confirm" class="form-control" required placeholder="Confirm Password"><br>
+                    Birthday: <input type="date" name="birthday" id="birthday" required><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Register</button>
                 </div>
                 
             </form>
