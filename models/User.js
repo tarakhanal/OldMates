@@ -36,7 +36,7 @@ let userSchema = mongoose.Schema({
 	Verified: Boolean,
 	ProfilePicture: {
         type: String,
-        default: "profile.jpg"
+        default: "profile.svg"
     },
 	Socials: [String],
 	Connections: [mongoose.SchemaTypes.ObjectId]
