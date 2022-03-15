@@ -21,11 +21,14 @@ const registerController = async (req, res) => {
         const bd = new Date(birthday);
         BDay = { Day: Number(bd.getDate()+1), Month: bd.getMonth()+1, Year: Number(bd.getFullYear())}
 
+        // Hash the password with a salt of 12
+        const hash = await bcrypt.hash(password, 12);
+
         await User.create({
             FirstName: `${firstName}`,
             LastName: `${lastName}`,
             Email: `${email}`,
-            Password: `${password}`,
+            Password: `${hash}`,
             Birthday: BDay
         });
 
