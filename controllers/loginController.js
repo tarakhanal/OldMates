@@ -23,7 +23,7 @@ const loginController = async (req, res) => {
         const correctPassword = await bcrypt.compare(password, realPassword).catch(err => { console.log(err); });
 
         if(correctPassword) {
-            loggedInUsers.set(user.Email, {FirstName: user.FirstName, LastName: user.LastName, Email: user.Email, sessionID: req.sessionID});
+            loggedInUsers.set(req.sessionID, {FirstName: user.FirstName, LastName: user.LastName, Email: user.Email, sessionID: req.sessionID});
             console.log(user.FirstName, "was logged in successfully!");
             console.log("Logged In Users: ", loggedInUsers);
             res.redirect('/home');
