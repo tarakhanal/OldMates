@@ -26,7 +26,7 @@ const loginController = async (req, res) => {
             loggedInUsers.set(user.Email, {FirstName: user.FirstName, LastName: user.LastName, Email: user.Email, sessionID: req.sessionID});
             console.log(user.FirstName, "was logged in successfully!");
             console.log("Logged In Users: ", loggedInUsers);
-            res.redirect('/');
+            res.redirect('/home');
         } else {
             console.log("Invalid username or password");
             res.redirect('/');
