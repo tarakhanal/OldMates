@@ -1,10 +1,9 @@
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
+const loggedInUsers = require('./loggedInUsers');
 const User = require('../models/User');
 
 mongoose.connect("mongodb://localhost:27017/OldMates");
-
-let loggedInUsers = new Map();
 
 const loginController = async (req, res) => {
     try {
