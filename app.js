@@ -7,6 +7,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public')) // To serve static files (css, images, js, etc.)
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(session(require('./config/session')));
 
 app.use('/', require('./routes/index'));
 app.use('/register', require('./routes/register'));
