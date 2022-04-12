@@ -1,0 +1,58 @@
+body{
+    background: #f7f7ff;
+    margin-top:20px;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid transparent;
+    border-radius: .25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+}
+.me-2 {
+    margin-right: .5rem!important;
+}
+
+.add-class, .remove-class, .get-classmates, .search-users {
+    margin:2%;
+}
+
+#edit-socials {
+    margin-left: 80%;
+}
+
+#edit-bio {
+    width: 2.5rem;
+    height: 1.3rem;
+    padding-top: 0.05rem;
+    padding-left: 0.5rem;
+    font-size: 12px;
+}
+
+#post-btn {
+    margin-left: 93%;
+}
+.comment-area-box .comment-area-btn {
+    background-color: #f2f8fb;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 .2rem .2rem;
+}
+
+.avatar-sm {
+    height: 2.25rem;
+    width: 2.25rem;
+}
+.rounded-circle {
+    border-radius: 50%!important;
+}
+.me-2 {
+    margin-right: .75rem!important;
+}
