@@ -38,6 +38,20 @@ body{
 #post-btn {
     margin-left: 93%;
 }
+#online-status {
+    display: inline-block;
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: lime;
+}
+#offline-status {
+    display: inline-block;
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: red;
+}
 .comment-area-box .comment-area-btn {
     background-color: #f2f8fb;
     padding: 10px;
