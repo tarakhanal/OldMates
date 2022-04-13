@@ -2,6 +2,9 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const loggedInUsers = require('./loggedInUsers');
 const User = require('../models/User');
+let users = require('./registeredUsers');
+const randomCode  = require('../utils/generateRandomCode');
+const sendEmail = require('../utils/sendEmailVerification');
 
 mongoose.connect("mongodb://localhost:27017/OldMates");
 
@@ -25,7 +28,16 @@ const loginController = async (req, res) => {
             loggedInUsers.set(req.sessionID, {FirstName: user.FirstName, LastName: user.LastName, Email: user.Email, sessionID: req.sessionID});
             console.log(user.FirstName, "was logged in successfully!");
             console.log("Logged In Users: ", loggedInUsers);
-            res.redirect('/home');
+            let verifiedUser = user.Verified;
+            if(verifiedUser) {
+                res.redirect('/home');
+            }
+            else {
+                let vCode = randomCode();
+                users.set(req.sessionID, {email: email, vCode: vCode});
+                sendEmail(email, vCode);
+                res.redirect('/verify');
+            }
         } else {
             console.log("Invalid username or password");
             res.redirect('/');

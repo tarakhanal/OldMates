@@ -34,7 +34,7 @@ let userSchema = mongoose.Schema({
         default: () => Date.now()
     },
 	Verified: {
-        Type: Boolean,
+        type: Boolean,
         default: false
     },
 	ProfilePicture: {
