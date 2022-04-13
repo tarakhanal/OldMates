@@ -41,7 +41,12 @@ let userSchema = mongoose.Schema({
         type: String,
         default: "profile.svg"
     },
-	Socials: [String],
+	Socials: {
+        website: {type: String, lowercase: true},
+        linkedIn: {type: String, lowercase: true},
+        twitter: {type: String, lowercase: true},
+        facebook: {type: String, lowercase: true}
+    },
 	Connections: [mongoose.SchemaTypes.ObjectId]
 
 });
